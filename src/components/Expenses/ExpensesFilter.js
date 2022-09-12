@@ -1,6 +1,8 @@
-//import './ExpensesFilter.css';
+import React from 'react';
 
-const ExpenseFilter = (props) => {
+import './ExpensesFilter.css';
+
+const ExpensesFilter = (props) => {
   const dropdownChangeHandler = (event) => {
     props.onChangeFilter(event.target.value);
   };
@@ -8,7 +10,7 @@ const ExpenseFilter = (props) => {
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
-        <label>Filter by Year</label>
+        <label>Filter by year</label>
         <select value={props.selected} onChange={dropdownChangeHandler}>
           <option value="2022">2022</option>
           <option value="2021">2021</option>
@@ -20,4 +22,4 @@ const ExpenseFilter = (props) => {
   );
 };
 
-export default ExpenseFilter;
+export default ExpensesFilter;
